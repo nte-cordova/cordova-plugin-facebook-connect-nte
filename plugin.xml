@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
         xmlns:android="http://schemas.android.com/apk/res/android"
-        id="cordova-plugin-facebook-connect"
-        version="3.2.0">
+        id="cordova-plugin-facebook-connect-nte"
+        version="3.2.0-no-zxing">
 
     <name>Facebook Connect</name>
 
@@ -13,7 +13,7 @@
       Cordova application as you use in your web application.
     </description>
 
-    <repo>https://github.com/cordova-plugin-facebook-connect/cordova-plugin-facebook-connect</repo>
+    <repo>https://github.com/nte-cordova/cordova-plugin-facebook-connect-nte</repo>
 
     <license>Apache 2.0</license>
 
@@ -80,7 +80,7 @@
               android:exported="true" />
         </config-file>
 
-        <framework src="com.facebook.android:facebook-android-sdk:$FACEBOOK_ANDROID_SDK_VERSION"/>
+        <framework src="build.gradle" custom="true" type="gradleReference"/>
 
         <!-- cordova plugin src files -->
         <source-file src="src/android/ConnectPlugin.java" target-dir="src/org/apache/cordova/facebook" />
@@ -216,7 +216,7 @@
             <access origin="https://*.fbcdn.net" />
             <access origin="https://*.akamaihd.net" />
         </config-file>
-        
+
         <hook type="after_prepare" src="scripts/browser/after_prepare.js" />
     </platform>
 </plugin>
